@@ -13,7 +13,7 @@
 <s:property value="maisu"/>
 <s:property value="#session.path"/>
 <s:property value="dd"/>
-	<s:form action="hyouAction">
+	<s:form action="GOloginction">
 		<p>ユーザーID：
 			<s:textfield label="ID" name="id"/>
 		</p>

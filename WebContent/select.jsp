@@ -39,84 +39,52 @@ $(function() {
 
 <s:form method="POST" action="test">
 
-	<div id="main">
-		<div id="contents">
-			<div class="checkbox">
+<div id="main">
+	<div id="contents">
 
 
-
-		<table>
-			<tr>
-				<th><s:text name="種類"/></th>
-                <th><s:text name="備考"/></th>
-				<th><s:text name="値段"/></th>
-				<th><s:text name="枚数"/></th>
-			</tr>
-
-	<s:iterator value="selectList">
-			<tr>
-				<td><s:property value="division" /></td>
-
-                <td><s:property value="explanation" /></td>
-
-				<td><s:property value="price" /></td>
-
-<td><s:select name="maisu" list="#{ '0':'0','1':'1','2':'2','3':'3','4':'4','5':'5','6':'6','7':'7','8':'8','9':'9','10':'10'}" /></td>
-
-			</tr>
-
-
-	</s:iterator>
+		<div class="checkbox">
+			<table>
+				<tr>
+					<th><s:text name="種類"/></th>
+					<th><s:text name="備考"/></th>
+					<th><s:text name="値段"/></th>
+					<th><s:text name="枚数"/></th>
+				</tr>
+				<s:iterator value="selectList">
+					<tr>
+						<td><s:property value="division" /></td>
+						<td><s:property value="explanation" /></td>
+						<td><s:property value="price" /></td>
+						<td><s:select name="maisu" list="#{ '0':'0','1':'1','2':'2','3':'3','4':'4','5':'5','6':'6','7':'7','8':'8','9':'9','10':'10'}" /></td>
+					</tr>
+				</s:iterator>
 			</table>
+		</div>
 
 
 
+		<div class="pass" >
+			<font color="#ff0000"><s:property value="#session.cans"/></font>
+			<br>
+			<br>
+			パス有効期間を選んでください
+			<br>
+			<s:select name="kikan" list="#{ '0':'1day','1':'week','2':'month','3':'year'}" />
+			<div class="calendar">
+				<div id="cal1" class="cal_wrapper">
+
+				</div>
+				<h3>来場希望日</h3><br>
+				<s:textfield type="text" id="date" name="date" placeholder="クリックして日付を選択"  size="25"/>
+				<br>
+				<font color="#ff0000"><s:property value="#session.dans"/></font>
+				<br>
+				<s:submit cssClass="button9" value="表示"/>
 			</div>
-
-			<div class="pass" >
-<font color="#ff0000"><s:property value="#session.cans"/></font>
-
-<br>
-<br>
-				パス有効期間を選んでください<br>
-				<s:select name="kikan" list="#{ '0':'1day','1':'week','2':'month','3':'year'}" />
-
-
-
-
-
-		<div class="calendar">
-			<div id="cal1" class="cal_wrapper">
-
-			</div>
-
-
-
-
-
-
-
-
-
- <h3>来場希望日</h3><br>
- <s:textfield type="text" id="date" name="date" placeholder="クリックして日付を選択"  size="25"/>
-<br>
-<font color="#ff0000"><s:property value="#session.dans"/></font>
-
-<br>
-
-			<s:submit cssClass="button9" value="表示"/>
-
-
-
-</div>
-
+		</div>
 	</div>
 </div>
-</div>
-
-
-
 </s:form>
 
 
