@@ -6,7 +6,7 @@ package dto;
 
 
 
-public class LoginDTO {
+public class hyouDTO {
 
 private String division;
 private String explanation;

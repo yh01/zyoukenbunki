@@ -10,8 +10,12 @@
 	</head>
 
 	<body> <!-- indexからbodyを持ってきて中身を書き換える -->
-<s:form action="GOloginction">
-<s:submit value="kotaki"/>
-</s:form>
+	<s:property value="#session.date2"/>
+	<s:property value="maisu"/>
+	<s:property value="#session.path"/>
+	<s:property value="dd"/>
+		<s:form action="GOhyouAction">
+		<s:submit value="kotaki"/>
+		</s:form>
 	</body>
 </html>

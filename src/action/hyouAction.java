@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.hyouDAO;
-import dto.LoginDTO;
+import dto.hyouDTO;
 
 /**
  * MySQLのデータを取得する為のクラス
@@ -16,14 +16,14 @@ import dto.LoginDTO;
  * @since 1.0
  * @version 1.0
  */
-public class LoginAction extends ActionSupport{
+public class hyouAction extends ActionSupport{
 
 
 
 	/**
 	 * ユーザー一覧のリスト
 	 */
-	private ArrayList<LoginDTO> selectList = new ArrayList<>();
+	private ArrayList<hyouDTO> selectList = new ArrayList<>();
 
 	/**
 	 * MySQLのデータを取得する為のメソッド
@@ -45,7 +45,7 @@ public class LoginAction extends ActionSupport{
 	 * ユーザー一覧のリストを取得する為のメソッド
 	 * @return selectList ユーザー一覧のリスト
 	 */
-	public ArrayList<LoginDTO> getSelectList() {
+	public ArrayList<hyouDTO> getSelectList() {
 		return selectList;
 	}
 
@@ -53,7 +53,7 @@ public class LoginAction extends ActionSupport{
 	 * ユーザー一覧のリストを格納する為のメソッド
 	 * @param selectList ユーザー一覧のリスト
 	 */
-	public void setSelectList(ArrayList<LoginDTO> selectList) {
+	public void setSelectList(ArrayList<hyouDTO> selectList) {
 		this.selectList = selectList;
 	}
 }

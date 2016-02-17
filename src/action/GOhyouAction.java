@@ -2,9 +2,9 @@ package action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class  GOloginction extends ActionSupport{
+public class  GOhyouAction extends ActionSupport{
 
 	public String execute(){
-return SUCCESS;
+		return SUCCESS;
 	}
-	}
+}

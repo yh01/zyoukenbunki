@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import dto.LoginDTO;
+import dto.hyouDTO;
 import util.DBConnector;;
 
 /**
@@ -20,7 +20,7 @@ public class hyouDAO {
 	/**
 	 * ユーザー一覧情報を格納するリスト
 	 */
-	private ArrayList<LoginDTO> selectList = new ArrayList<>();
+	private ArrayList<hyouDTO> selectList = new ArrayList<>();
 
 	/**
 	 * MySQLのデータを取得する為のメソッド
@@ -35,7 +35,7 @@ public class hyouDAO {
 			PreparedStatement ps = connection.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				LoginDTO dto = new LoginDTO();
+				hyouDTO dto = new hyouDTO();
 				dto.setDivision(rs.getString("division"));
 				dto.setExplanation(rs.getString("explanation"));
 				dto.setPrice(rs.getInt("price"));
@@ -58,7 +58,7 @@ public class hyouDAO {
 	 * ユーザーリストを取得する為のメソッド
 	 * @return selectList ユーザーリスト
 	 */
-	public ArrayList<LoginDTO> getSelectList() {
+	public ArrayList<hyouDTO> getSelectList() {
 		return selectList;
 	}
 
@@ -66,7 +66,7 @@ public class hyouDAO {
 	 * ユーザーリストを格納する為のメソッド
 	 * @param selectList ユーザーリスト
 	 */
-	public void setSelectList(ArrayList<LoginDTO> selectList) {
+	public void setSelectList(ArrayList<hyouDTO> selectList) {
 		this.selectList = selectList;
 	}
 }
