@@ -17,5 +17,8 @@
 		<s:form action="GOhyouAction">
 		<s:submit value="kotaki"/>
 		</s:form>
+		<s:form action="MainHyouAction">
+		<s:submit value="kotaki"/>
+		</s:form>
 	</body>
 </html>
