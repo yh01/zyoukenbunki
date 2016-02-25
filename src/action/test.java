@@ -27,9 +27,17 @@ import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParseExceptio
          private int goukei;//チケットの枚数の合計値を入れる変数
 
          private int kikan;
+         private String price;
          private String path;//パスの有効期間
 
-         public String tans;//エラーメッセージを入れる変数
+         public String getPrice() {
+			return price;
+		}
+		public void setPrice(String price) {
+			this.price = price;
+		}
+
+		public String tans;//エラーメッセージを入れる変数
          public String dans;//同じく
 
          public boolean x;
@@ -44,26 +52,24 @@ import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParseExceptio
 
 
 
-         public String execute() throws ParseException, java.text.ParseException{
+        public String execute() throws ParseException, java.text.ParseException{
 
 //チケットが選択されているか判断する--------------------------------------------------------------------
 
-        	 for (int i = 0; i < maisu.length; i++){
-        		 goukei += maisu[i];
-        		 }
+        for (int i = 0; i < maisu.length; i++){
+        	goukei += maisu[i];
+        }
 
 
-        	 if(goukei==0){
-
-        		        tans="チケットが選択されていません";
-        		        session.put("cans",tans );
-        		        x=false;
-
-        	 }else{
-        		 tans=null;
-        		 session.put("cans", tans);
-                  x=true;
-        		 }
+        if(goukei==0){
+	        tans="チケットが選択されていません";
+	        session.put("cans",tans );
+	        x=false;
+        }else{
+	        tans=null;
+	        session.put("cans", tans);
+	        x=true;
+        }
 
 
 
@@ -109,7 +115,7 @@ import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParseExceptio
 //次のページに値を渡すゾーン--------------------------------------------------------------------------
         	  session.put("maisu",maisu );
               session.put("path",path );
-
+              session.put("price", price);
 
 
               Date date2  = toDate(date);

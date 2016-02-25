@@ -7,13 +7,22 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="06.select.css">
+		<link rel="stylesheet" type="text/css" href="botan.css">
 	</head>
 
 	<body> <!-- indexからbodyを持ってきて中身を書き換える -->
-	<s:property value="#session.date2"/>
-	<s:property value="maisu"/>
-	<s:property value="#session.path"/>
-	<s:property value="dd"/>
+	<div class="checkbox">
+	<table>
+
+		<tr>
+		<td><s:property value="#session.date2"/></td>
+		<td><s:property value="#session.path"/></td>
+		<td><s:property value="maisu"/></td>
+		</tr>
+
+	</table>
+	</div>
 		<s:form action="GOhyouAction">
 		<s:submit value="kotaki"/>
 		</s:form>
